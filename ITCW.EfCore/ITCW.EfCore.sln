@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITCW.EfCore", "ITCW.EfCore\ITCW.EfCore.csproj", "{65C64B8C-42E0-4534-A3B0-3FD0927E4162}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITCW.EfCore.Contracts", "ITCW.EfCore.Contracts\ITCW.EfCore.Contracts.csproj", "{D7D979A2-9887-4778-88A0-05CD0FA90E1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65C64B8C-42E0-4534-A3B0-3FD0927E4162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C64B8C-42E0-4534-A3B0-3FD0927E4162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C64B8C-42E0-4534-A3B0-3FD0927E4162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C64B8C-42E0-4534-A3B0-3FD0927E4162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7D979A2-9887-4778-88A0-05CD0FA90E1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D979A2-9887-4778-88A0-05CD0FA90E1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D979A2-9887-4778-88A0-05CD0FA90E1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D979A2-9887-4778-88A0-05CD0FA90E1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal
