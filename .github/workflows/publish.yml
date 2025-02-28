@@ -6,6 +6,8 @@ on:
   push:
     branches:
     - main
+  release:
+    types: [published]
 
 env:
   NuGetDirectory: ${{ github.workspace}}/nuget
