@@ -53,7 +53,10 @@ jobs:
         dotnet-version: '9.x.x'
 
     - name: Publish NuGet package
+      env:
+        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+      shell: pwsh
       run: |
         foreach($file in (Get-ChildItem "${{ env.NuGetDirectory }}" -Recurse -Include *.nupkg)) {
-            dotnet nuget push $file --api-key "${{ secrets.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json
+            dotnet nuget push $file --api-key "$env:NUGET_API_KEY" --source https://api.nuget.org/v3/index.json
         }
