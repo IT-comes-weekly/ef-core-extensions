@@ -13,6 +13,8 @@
         <PackageTags>efcore, repository, repository pattern, generic, extension, library</PackageTags>
         
         <PackageReadmeFile>README.md</PackageReadmeFile>
+
+        <VersionPrefix>1.0.1</VersionPrefix>
     </PropertyGroup>
 
     <ItemGroup>
