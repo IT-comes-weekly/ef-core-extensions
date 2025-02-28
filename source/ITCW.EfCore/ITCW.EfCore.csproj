@@ -4,14 +4,26 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+
+        <PackageId>ITCW.EfCore</PackageId>
+        <Authors>Adrian Wilp</Authors>
+        <Description>A generic Base Repository for EF Core Repository Pattern.</Description>
+        <PackageProjectUrl>https://github.com/IT-comes-weekly/ef-core-extensions</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>efcore, repository, repository pattern, generic, extension, library</PackageTags>
+        
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ITCW.EfCore.Contracts\ITCW.EfCore.Contracts.csproj" />
+        <ProjectReference Include="..\ITCW.EfCore.Contracts\ITCW.EfCore.Contracts.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
 </Project>
