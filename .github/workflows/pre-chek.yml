@@ -1,0 +1,25 @@
+name: Pre-Check
+on:
+  pull_request:
+    branches:
+      - 'main'
+
+env:
+  NuGetDirectory: ${{ github.workspace}}/nuget
+
+jobs:
+  create_nuget:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.x.x'
+
+    - name: Create NuGet package
+      run: dotnet pack --configuration Release --output ${{ env.NuGetDirectory }}
+      working-directory: ./source/ITCW.EfCore
