@@ -12,7 +12,7 @@ namespace ITCW.EfCore.Repositories;
 /// <typeparam name="TEntity">Type of the entity class the repository is intended for.</typeparam>
 /// <typeparam name="TDbContext">Type of the specific <see cref="DbContext"/> which should be used for communication.</typeparam>
 public abstract class ITCWBaseRepository<TEntity, TDbContext> : IITCWBaseRepository<TEntity>
-    where TEntity : class, new()
+    where TEntity : class
     where TDbContext : DbContext
 {
     /// <summary>
@@ -30,7 +30,7 @@ public abstract class ITCWBaseRepository<TEntity, TDbContext> : IITCWBaseReposit
     }
     
     /// <inheritdoc cref="IITCWBaseRepository{TEntity}.GetAsync(Expression{Func{TEntity, bool}}, Expression{Func{TEntity, TEntity}}, Expression{Func{TEntity, object}}, ListSortDirection, int?, int?, bool, CancellationToken)"/>
-    public async Task<IEnumerable<TEntity>> GetAsync(
+    public async Task<List<TEntity>> GetAsync(
         Expression<Func<TEntity, bool>>? filterExpression = null,
         Expression<Func<TEntity, TEntity>>? selector = null,
         Expression<Func<TEntity, object>>? orderByExpression = null,
@@ -156,12 +156,7 @@ public abstract class ITCWBaseRepository<TEntity, TDbContext> : IITCWBaseReposit
         int? take = null,
         bool asNoTracking = true)
     {
-        var query = Context.Set<TEntity>().AsQueryable();
-
-        if (asNoTracking)
-        {
-            query = query.AsNoTracking();
-        }
+        var query = asNoTracking ? Context.Set<TEntity>().AsNoTracking() : Context.Set<TEntity>().AsQueryable();
             
         if (filterExpression != null)
         {
