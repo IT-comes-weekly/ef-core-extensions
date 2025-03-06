@@ -9,7 +9,7 @@ namespace ITCW.EfCore.Contracts.Repositories;
 /// </summary>
 /// <typeparam name="TEntity">Type of the entity class the repository is intended for.</typeparam>
 public interface IITCWBaseRepository<TEntity>
-    where TEntity : class, new()
+    where TEntity : class
 {
     /// <summary>
     /// Get all filtered entities of type <see cref="TEntity"/> async.
@@ -22,8 +22,8 @@ public interface IITCWBaseRepository<TEntity>
     /// <param name="take">The amount of results to return.</param>
     /// <param name="asNoTracking">Toggle to execute the statement without change tracking.</param>
     /// <param name="cancellationToken">The <see cref="CancellationToken"/> which holds information about the current connection.</param>
-    /// <returns>The entities of type <see cref="TEntity"/> as <see cref="IEnumerable{T}"/>.</returns>
-    Task<IEnumerable<TEntity>> GetAsync(
+    /// <returns>The entities of type <see cref="TEntity"/> as <see cref="List{T}"/>.</returns>
+    Task<List<TEntity>> GetAsync(
         Expression<Func<TEntity, bool>>? filterExpression = null,
         Expression<Func<TEntity, TEntity>>? selector = null,
         Expression<Func<TEntity, object>>? orderByExpression = null,
