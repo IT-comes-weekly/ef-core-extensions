@@ -34,7 +34,7 @@ await bookRepo.AddAsync(
         Name = "Book 2",
     });
 
-var books = await bookRepo.GetAsync();
+var books = await bookRepo.GetAsync(asNoTracking: false);
 
 foreach (var book in books)
 {
