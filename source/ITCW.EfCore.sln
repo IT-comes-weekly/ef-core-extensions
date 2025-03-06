@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITCW.EfCore", "ITCW.EfCore\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITCW.EfCore.Contracts", "ITCW.EfCore.Contracts\ITCW.EfCore.Contracts.csproj", "{D7D979A2-9887-4778-88A0-05CD0FA90E1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITCW.EfCore.Example", "ITCW.EfCore.Example\ITCW.EfCore.Example.csproj", "{1706A8AC-B648-4724-8B39-CAB760F492AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +20,10 @@ Global
 		{D7D979A2-9887-4778-88A0-05CD0FA90E1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7D979A2-9887-4778-88A0-05CD0FA90E1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7D979A2-9887-4778-88A0-05CD0FA90E1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1706A8AC-B648-4724-8B39-CAB760F492AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1706A8AC-B648-4724-8B39-CAB760F492AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1706A8AC-B648-4724-8B39-CAB760F492AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1706A8AC-B648-4724-8B39-CAB760F492AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
